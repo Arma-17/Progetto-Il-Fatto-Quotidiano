@@ -1,0 +1,262 @@
+
+
+*{
+    font-family: 'playfair display', serif;
+}
+
+.site-header{
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+}
+
+
+.box-sostienici h3{
+    display: flex;
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.375rem;
+}
+
+
+.box-sostienici p{
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    margin-bottom: 0.625rem;
+}
+
+.sostienici-button{
+    max-width: 13.125rem;
+    display: flex;
+
+    background-color: #8E0000;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    align-content: center;
+    margin-left: 3px;
+    justify-content: center;
+    padding: 0.625rem;
+    color: #fff;
+}
+
+
+#logo {
+    margin: 0 auto;
+    width: 30%;
+
+}
+
+#contenuto\ barra{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 100px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size:12px ;
+}
+
+#contenuto\ barra li{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 1.25rem 0 0;
+}
+
+.fondazione{
+    color: rgba(0, 0, 0, 0.4);
+
+}
+#abbonati{
+    color: #8E0000;
+}
+
+.info{
+    padding: 30px 0 0;
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    font-size:13px ;
+    color: rgba(0, 0, 0, 0.4);
+    justify-content: space-between;
+}
+
+.social-wrapper ul li img{
+    width: 23px;
+    margin: auto;
+    padding: 5px;
+}
+
+
+.home-before-content{
+    padding-top: 15px;
+    display: flex;
+    max-width: 1080px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.home-before-content ul{
+    list-style: none;
+    display: flex;
+    font-size:12px ;
+    flex-wrap: wrap;
+}
+
+.home-before-content h5{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.home-before-content ul li{
+    padding: 6px;
+    margin: 0 3px 0 0;
+}
+
+.home-before-content ul li a{
+    font-weight: bold;
+}
+
+.Temi li::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.Temi li:hover::after{
+    width: 100%;
+}
+
+.red-bar{
+    background-color: #e50901;
+    text-transform: uppercase;
+    border-radius: 6px;
+    max-width: 1080px;
+    margin: auto;
+
+}
+
+.blocco-fqextra-header{
+    list-style: none;
+    display: flex;
+    font-size:12px ;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+
+.red-bar ul li{
+    display: flex;
+    font-size:16px ;
+
+}
+
+.red-bar ul li h4,.red-bar ul li h5,.red-bar ul li a{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.red-bar ul li h4{
+    color: #fdb9b6;
+}
+.red-bar ul li strong{
+    color: #fff;
+    font-size: 17px;
+}
+
+.circle{
+    width: 4px;
+    height: 4px;
+    margin: 10px 15px 5px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+
+}
+
+
+.media-scroller {
+    gap: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    max-width: 1080px;
+    padding:  10px  10px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    background: #403d3b;
+    margin: auto;
+
+}
+
+.media-scroller--with-groups {
+    grid-auto-columns: 100%;
+    scroll-behavior: auto;
+
+}
+
+
+
+.media-group {
+    display: grid;
+    gap: 100px;
+    grid-auto-flow: column;
+
+}
+
+.media-element {
+    display: flex;
+    background: gray;
+    border-radius: 5px;
+    padding: 2px 2px 2px 5px;
+    justify-content: space-between;
+
+}
+
+.media-element > img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 30%;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+
+.media-element h4{
+    color: #c0150d;
+    font-size: 12px;
+}
+
+.media-element p{
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+
