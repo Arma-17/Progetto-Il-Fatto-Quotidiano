@@ -14,7 +14,8 @@ body{
     background:white;
     padding-inline: 20px;
     position: relative;
-    top: 100px;
+    top: 90px;
+    padding-bottom: 50px;
 }
 
 .site-header{
@@ -25,7 +26,7 @@ body{
     justify-content: space-between;
     max-width: 1080px;
     width: 100%;
-    margin-top: -20px;
+    margin-top: -25px;
     border-bottom: 1px solid #8d0000;
 
 }
@@ -486,9 +487,72 @@ body{
     margin-block-end: 10px;
 }
 
+/* article tris */
+
 .article-tris{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
+}
+
+/* footer */
+
+
+
+footer ul li{
+    margin-inline: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+footer div img{
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    width: 60px;
+}
+
+#footer-img{
+    border-bottom: 1px solid white;
+}
+
+.icons{
+    color: white;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+footer div p{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+footer div{
+    text-align: center;
+
+
+}
+
+.footer{
+    background: #191919;
+    padding-inline: 10px;
+    position: relative;
+    top: 30px;
+    margin-top: 20px;
 }
