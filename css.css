@@ -4,18 +4,69 @@
     font-family: 'playfair display', serif;
 }
 
-.site-header{
+body{
+    background: #f0eeea;
     max-width: 1080px;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
 }
 
+#all{
+    background:white;
+    padding-inline: 20px;
+    position: relative;
+    top: 100px;
+}
 
-.box-sostienici h3{
+.site-header{
+    z-index: 1;
     display: flex;
+    position: fixed;
+    background: white;
+    justify-content: space-between;
+    max-width: 1080px;
+    width: 100%;
+    margin-top: -20px;
+    border-bottom: 1px solid #8d0000;
+
+}
+
+@media screen and (max-width:890px  ){
+    .box-sostienici div{
+        display: none;
+    }
+
+    .box-sostienici button{
+        display:block;
+        width:100% ;
+        margin-top: 25px ;
+        margin-left: 5px;
+    }
+
+
+    #logo{
+        width: 40px;
+        height: 40px;
+        margin-top: -40px;
+    }
+
+    #all{
+        top: 50px;
+    }
+
+    #contenuto\ barra  ul li a{
+        display: none;
+    }
+    #contenuto\ barra li a{
+        margin-top:25px
+    }
+
+}
+
+.box-sostienici{
+    margin-left: 10px;
+}
+
+.box-sostienici div h3{
     opacity: 1;
     height: auto;
     visibility: visible;
@@ -26,7 +77,7 @@
 }
 
 
-.box-sostienici p{
+.box-sostienici div p{
     font-family: sans-serif;
     font-size: 0.75rem;
     margin-bottom: 0.625rem;
@@ -34,8 +85,7 @@
 
 .sostienici-button{
     max-width: 13.125rem;
-    display: flex;
-
+    border: none;
     background-color: #8E0000;
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -46,48 +96,74 @@
     justify-content: center;
     padding: 0.625rem;
     color: #fff;
+    margin-bottom: 10px;
+}
+
+.sostienici-button:active{
+    background: #3d0202;
+    animation-name: cambio;
+    animation-duration: 3s;
+}
+@keyframes cambio{
+    0%{
+        background: #3d0202;
+    }
+    50%{
+        background: #8E0000;
+    }
+    100%{
+        background: #3d0202;
+    }
 }
 
 
 #logo {
-    margin: 0 auto;
-    width: 30%;
-
+    width: 250px;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    top: 70px;
 }
+
+/* barra accedi e abbonati */
 
 #contenuto\ barra{
     padding: 0;
-    list-style: none;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 100px;
     font-family: sans-serif;
     font-weight: bold;
     font-size:12px ;
+    margin-right: 10px;
 }
 
 #contenuto\ barra li{
+    margin-inline: 4px;
+}
+
+#contenuto\ barra ul {
     padding: 0;
+    list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     margin: 0 1.25rem 0 0;
+}
+
+
+#abbonati{
+    color: #8E0000;
 }
 
 .fondazione{
     color: rgba(0, 0, 0, 0.4);
 
 }
-#abbonati{
-    color: #8E0000;
-}
+
 
 .info{
     padding: 30px 0 0;
-    max-width: 1080px;
-    margin: auto;
     display: flex;
     list-style: none;
     font-size:13px ;
@@ -97,16 +173,14 @@
 
 .social-wrapper ul li img{
     width: 23px;
-    margin: auto;
-    padding: 5px;
+
+
 }
 
 
 .home-before-content{
     padding-top: 15px;
     display: flex;
-    max-width: 1080px;
-    margin: auto;
     flex-wrap: wrap;
 }
 
@@ -130,7 +204,7 @@
     font-weight: bold;
 }
 
-.Temi li::after{
+#Temi li::after{
     content: '';
     width: 0;
     height: 1px;
@@ -140,7 +214,7 @@
     transition: 0.3s;
 }
 
-.Temi li:hover::after{
+#Temi li:hover::after{
     width: 100%;
 }
 
@@ -148,8 +222,6 @@
     background-color: #e50901;
     text-transform: uppercase;
     border-radius: 6px;
-    max-width: 1080px;
-    margin: auto;
 
 }
 
@@ -199,12 +271,10 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 21%;
-    max-width: 1080px;
     padding:  10px  10px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     background: #403d3b;
-    margin: auto;
 
 }
 
@@ -257,6 +327,168 @@
     font-size: 15px;
 }
 
+/* featured article */
+
+.article-section{
+    display: flex;
+}
+
+.article-section img{
+    width: 60%;
+    height: 60%;
+    margin-right: 20px;
+}
+
+@media screen and (max-width:930px  ){
+    .article-section{
+        flex-wrap: wrap;
+    }
+    .article-section img{
+        width: 80%;
+    }
+}
+
+#first{
+     margin-block-start: 0;
+    font-size: 16px;
+ }
+
+.article-section div p{
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+    font-size: 13px;
+}
+
+.article-section div p span{
+    color: #8b0404;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.featured-article h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+.featured-article h1 span{
+    color: #8b0404;
+}
+
+#first span{
+    font-size: 17px;
+}
+
+.fonte {
+    color: rgba(0, 0, 0, 0.4);
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+
+}
+
+/* second article */
+
+.secondary-article{
+    width: 65%;
+}
+
+.secondary-article h1{
+    font-weight: bold;
+    font-size: 25px;
+}
+.secondary-article h2 span{
+    color: #8b0404;
+}
+
+.second-article-section{
+    display: flex;
+}
+
+.near{
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-article-section img{
+    width: 70%;
+    height: 70%;
+    margin-right: 20px;
+}
+
+.second-article-section div p{
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+    font-size: 13px;
+}
+
+.second-article-section div p span{
+    color: #8b0404;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+@media screen and (max-width:870px  ){
+    .second-article-section{
+        flex-wrap: wrap;
+    }
+}
+
+/* third article */
+
+.little-article{
+    width: 33%;
+}
+
+.margin-add{
+    margin-top: 150px;
+}
+
+.little-article img{
+    width: 80%;
+}
+
+.little-article div p{
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+    font-size: 13px;
+}
+
+.little-article div h5{
+    color: #8b0404;
+    margin-block-start: 5px;
+    margin-block-end: 10px;
+}
+
+@media screen and (max-width:600px  ){
+    .near{
+        display: block;
+    }
+
+    .little-article{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .secondary-article{
+        width: 100%;
+        margin-block-end: 20px ;
+    }
 
 
 
+}
+
+/* red bar scuola */
+#red-bar-scuola img{
+    width: 100%;
+}
+
+#red-bar-scuola{
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+.article-tris{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
