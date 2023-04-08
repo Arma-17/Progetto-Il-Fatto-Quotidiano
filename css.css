@@ -139,6 +139,10 @@ body{
     margin-right: 10px;
 }
 
+#contenuto\ barra a:hover  {
+    color: #560202;
+}
+
 #contenuto\ barra li{
     margin-inline: 4px;
 }
@@ -385,6 +389,27 @@ body{
 
 }
 
+
+.featured-article h1:hover,.article-section div p:hover,.secondary-article h2:hover,
+.second-article-section div p:hover,.little-article div h5:hover,.little-article div p:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    animation: underline 1s ease-in-out infinite;
+}
+
+
+@keyframes underline {
+    0% {
+        text-decoration-color: red;
+    }
+    50% {
+        text-decoration-color: blue;
+    }
+    100% {
+        text-decoration-color: green;
+    }
+}
+
 /* second article */
 
 .secondary-article{
@@ -555,4 +580,18 @@ footer div{
     position: relative;
     top: 30px;
     margin-top: 20px;
+}
+
+footer ul li::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+footer ul li:hover::after{
+    width: 100%;
 }
