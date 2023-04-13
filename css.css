@@ -10,12 +10,14 @@ body{
     margin: auto;
 }
 
+
 #all{
     background:white;
     padding-inline: 20px;
     position: relative;
     top: 90px;
     padding-bottom: 50px;
+
 }
 
 .site-header{
@@ -43,6 +45,10 @@ body{
         margin-left: 5px;
     }
 
+    #all{
+        margin-top: -20px;
+    }
+
 
     #logo{
         width: 40px;
@@ -54,11 +60,11 @@ body{
         top: 50px;
     }
 
-    #contenuto\ barra  ul li a{
+    #contenuto-barra li {
         display: none;
     }
-    #contenuto\ barra li a{
-        margin-top:25px
+    #contenuto\ barra {
+        padding-top: 20px;
     }
 
 }
@@ -130,24 +136,24 @@ body{
 /* barra accedi e abbonati */
 
 #contenuto\ barra{
-    padding: 0;
     display: flex;
     align-items: center;
     font-family: sans-serif;
     font-weight: bold;
     font-size:12px ;
     margin-right: 10px;
+    margin-top: -20px;
 }
 
-#contenuto\ barra a:hover  {
+#contenuto-barra a:hover,.contenu\ barre p a:hover{
     color: #560202;
 }
 
-#contenuto\ barra li{
+#contenuto-barra li{
     margin-inline: 4px;
 }
 
-#contenuto\ barra ul {
+#contenuto-barra {
     padding: 0;
     list-style: none;
     display: flex;
@@ -594,4 +600,222 @@ footer ul li::after{
 
 footer ul li:hover::after{
     width: 100%;
+}
+
+
+
+#toggle {
+    display: none;
+}
+
+
+/* Hamburger menu */
+.hamburger {
+    z-index: 5;
+    margin-left: 20px;
+}
+
+.hamburger div {
+    position: relative;
+    height: 2px;
+    background-color: #8b8b8b;
+    margin-top: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.top-bun, .bottom-bun {
+    width: 25px;
+}
+.meat{
+    width: 15px;
+}
+
+
+
+/* Nav Styles */
+.nav-back{
+    max-width: 1080px;
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: -100%; left: 0; right: 0; bottom: 0;
+
+    transition: all 0.10ms ease-in-out;
+    transform: scale(0);
+    color: white;
+    padding-top: 160px;
+    padding-bottom: 180px;
+    font-size: 12px;
+    overflow-y: auto;
+}
+
+.nav {
+    margin-left: 30px;
+    margin-right: 150px;
+
+}
+
+.nav-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.nav-1 div ul{
+    list-style: none;
+}
+
+.nav-1 div ul li{
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+    font-size: 15px;
+}
+
+.nav-1 div ul li:hover{
+    color: #8b0404;
+}
+
+.menu-1 ul,.menu-2{
+    color: #747274;
+}
+
+/* Animations */
+#toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+    margin-right: 20px;
+}
+#toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+    width: 25px;
+    transform: rotate(45deg);
+    margin-top: -2px;
+}
+
+#toggle:checked + .hamburger + .nav-back {
+    top: 0;
+    transform: scale(1);
+}
+
+/* Nav 2 */
+
+.nav-2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    margin: 20px 10px 20px -30px;
+}
+
+.nav-2 ul li{
+    color: #8b8b8b;
+
+}
+
+.nav-2 ul li:hover{
+    color: #333333;
+}
+
+.nav-2{
+    margin-right: -60px;
+    margin-top: 50px;
+    border-bottom: 1px solid #8b8b8b;
+    border-top: 1px solid #8b8b8b;
+}
+
+/* Nav 3 */
+
+.button-1{
+    max-width: 13.125rem;
+    border: none;
+    background-color: #8E0000;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    align-content: center;
+    margin-left: 3px;
+    justify-content: center;
+    padding: 0.625rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.button-1:active{
+    background: #3d0202;
+    animation-name: cambio;
+    animation-duration: 3s;
+}
+@keyframes cambio{
+    0%{
+        background: #3d0202;
+    }
+    50%{
+        background: #8E0000;
+    }
+    100%{
+        background: #3d0202;
+    }
+}
+
+.nav-3{
+    margin-left: -30px;
+    margin-right: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-1{
+    color: white;
+    font-size: 26px;
+}
+
+.icons-1 i{
+    margin-inline: 30px;
+}
+
+.button-1{
+    width: 200px;
+}
+
+@media screen and (max-width:921px){
+    .nav-3 div i{
+        display: none;
+    }
+
+    .nav{
+        margin-right: 100px;
+    }
+    .nav-3{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        padding-left: 25%;
+    }
+}
+
+@media screen and (max-width:447px){
+    .nav-1 ul li{
+        border-bottom: 1px solid white;
+    }
+
+    .nav-1{
+        justify-content: center;
+    }
+
+    .nav-2{
+        overflow-y: auto;
+
+    }
+    .nav-2 ul {
+        display: block;
+        text-align: center;
+    }
 }
