@@ -292,16 +292,21 @@ body{
 .media-scroller--with-groups {
     grid-auto-columns: 100%;
     scroll-behavior: auto;
-
 }
-
 
 
 .media-group {
     display: grid;
     gap: 100px;
     grid-auto-flow: column;
+}
 
+@media (max-width: 670px) {
+    .media-group {
+        display: grid;
+        gap: 20px;
+        grid-auto-flow: row;
+    }
 }
 
 .media-element {
@@ -398,23 +403,11 @@ body{
 
 .featured-article h1:hover,.article-section div p:hover,.secondary-article h2:hover,
 .second-article-section div p:hover,.little-article div h5:hover,.little-article div p:hover {
-    text-decoration: underline;
+    text-decoration: underline solid black;
     text-decoration-thickness: 2px;
     animation: underline 1s ease-in-out infinite;
 }
 
-
-@keyframes underline {
-    0% {
-        text-decoration-color: red;
-    }
-    50% {
-        text-decoration-color: blue;
-    }
-    100% {
-        text-decoration-color: green;
-    }
-}
 
 /* second article */
 
